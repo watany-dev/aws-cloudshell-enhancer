@@ -38,12 +38,12 @@ dy: init
 	which dy || (curl -O -L https://github.com/awslabs/dynein/releases/latest/download/dynein-linux.tar.gz && tar xzvf dynein-linux.tar.gz && sudo mv dy ${WORK}/)
 
 rm-dy:
-	sudo yum remove openssl11 openssl11-devel
+	sudo yum remove openssl11 openssl11-devel -y
 	sudo rm ${WORK}/dy
 
 # amplify
 amplify: init
-	which amplify || npm install -g @aws-amplify/cli
+	which amplify || sudo npm install -g @aws-amplify/cli
 
 # git-remote-codecommit
 git: init
