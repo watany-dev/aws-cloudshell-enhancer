@@ -1,6 +1,6 @@
 # aws-cloudshell-enhancer
 
-This repository contains a Makefile that simplifies the installation and management of various AWS CLI tools, including kubectl, eksctl, rain, cfn-lint, and dynein. The Makefile allows you to quickly set up these tools on your local machine with minimal effort.
+This repository contains a Makefile that simplifies the installation and management of various AWS CLI tools, including kubectl, eksctl, rain, cfn-lint, and dynein. The Makefile allows you to quickly set up these tools on AWS Cloud Shell.
 
 ## Prerequisites
 
@@ -18,6 +18,12 @@ make install
 
 ## Usage
 
+- eks
+- cfn (CloudFormation)
+- dy (DynamoDB)
+- amplify
+- git (Codecommit)
+
 ### install
 
 ```bash
@@ -30,8 +36,7 @@ make eks
 # To install rain and cfn-lint
 make cfn
 
-# To install dynein
-make dy
+...
 ```
 
 Checking Installed Versions
