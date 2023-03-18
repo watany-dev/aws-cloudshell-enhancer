@@ -20,6 +20,7 @@ rm-eks:
 
 ver-eks:
 	eksctl version
+	eksctl anywhere version
 
 # rain & cfn-lint
 cfn: init

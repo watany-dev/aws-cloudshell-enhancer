@@ -11,24 +11,27 @@ This repository contains a Makefile that simplifies the installation and managem
 To install the desired CLI tools, clone this repository and run the `install` target in the Makefile:
 
 ```bash
-git clone https://github.com/username/aws-cli-tools-installer.git
-cd aws-cli-tools-installer
-make install
+git clone https://github.com/watany-dev/aws-cloudshell-enhancer.git
+cd aws-cloudshell-enhancer
 ```
 
 ## Usage
 
-- eks
-- cfn (CloudFormation)
-- dy (DynamoDB)
-- amplify
-- git (Codecommit)
+|command|Service Name|	Tool Name	|URL|
+|:---|:---|:---|:---|
+|eks| Amazon EKS	|eksctl|	https://eksctl.io/ |
+||Amazon EKS	|eks anywhere|	https://aws.amazon.com/eks/anywhere/
+|cfn|AWS Cloudformation|	rain|	https://github.com/aws-cloudformation/rain |
+||AWS Cloudformation|	cfn-lint|	https://github.com/aws-cloudformation/cfn-python-lint |
+|dy|DynamoDB|	dynein|	https://github.com/Shopify/dynein |
+|amplify|AWS Amplify|	Amplify-cli|	https://aws.amazon.com/amplify/cli/ |
+|git|Git/Codecommit|	git-remote-codecommit|	https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-git-remote-codecommit.html |
 
 ### install
 
 ```bash
 # Install all
-make clean
+make install
 
 # To install eksctl
 make eks
