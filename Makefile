@@ -12,9 +12,11 @@ init:
 eks: init
 	which kubectl || (curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x kubectl && sudo mv kubectl ${WORK}/)
 	which eksctl || (curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp && sudo mv /tmp/eksctl ${WORK}/)
+	which 'eksctl anywhere' || (curl --silent --location "https://anywhere-assets.eks.amazonaws.com/releases/eks-a/31/artifacts/eks-a/v0.14.4/linux/amd64/eksctl-anywhere-v0.14.4-linux-amd64.tar.gz" | tar xz ./eksctl-anywhere && sudo mv ./eksctl-anywhere ${WORK}/)
 
 rm-eks:
-	sudo rm ${WORK}/eksctl
+	rm ${WORK}/eksctl
+	rm ${WORK}/eksctl-anywhere
 
 ver-eks:
 	eksctl version
