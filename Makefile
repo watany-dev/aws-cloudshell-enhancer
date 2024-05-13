@@ -24,7 +24,7 @@ ver-eks:
 
 # rain & cfn-lint
 cfn: init
-	which rain || (curl -OL https://github.com/aws-cloudformation/rain/releases/download/v1.3.2/rain-v1.3.2_linux-amd64.zip && unzip rain-v1.3.2_linux-amd64.zip && mv rain-v1.3.2_linux-amd64/rain  ${WORK}/ && rm -rf rain-v1.3.2_linux-amd64*)
+	which rain || (curl -OL https://github.com/aws-cloudformation/rain/releases/download/v1.8.6/rain-v1.8.6_linux-amd64.zip && unzip rain-v1.8.6_linux-amd64.zip && mv rain-v1.8.6_linux-amd64/rain  ${WORK}/ && rm -rf rain-v1.8.6_linux-amd64*)
 	which cfn-lint || pip3 -q install cfn-lint
 
 rm-cfn:
